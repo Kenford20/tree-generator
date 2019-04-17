@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Kenford20/tree-generator/issues"
   },
-  "homepage": "https://github.com/Kenford20/tree-generator#readme"
+  "homepage": "https://github.com/Kenford20/tree-generator#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }
