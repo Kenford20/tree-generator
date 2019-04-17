@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Tree Generator</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <script src="index.js"></script>
+    </head>
+
+    <body>
+        ===========================
+        JavaScript Tree Coding Test
+        ===========================
+
+        <br/><br/>
+            Render a tree using jQuery / JavaScript client-side in the browser.
+        <br/>
+        <br/>
+            Clicking on a node should call a hook that will display the "CODEVal" of that node.  This should not fire when expanding / collapsing the tree.
+        <br/>
+            1. The array is in the format it would be received from the database - an array of rows
+        <br/>
+            2. If CODEParentID is null, that means it is a root node.  Otherwise, CODEParentID has the CODEID of the parent element in the tree
+        <br/>
+            3. CODEIcon is the suffix of the icon used to render that node - "icon_xxxxx.png"
+        <br/>
+            4. CODEVal can be ignored
+        <br/>
+            5. CODETxt is the Display Text
+        
+        <br/>
+        <br/>
+        <button id="btn">Generate a tree!</button>
+        <div id="tree-container"></div>
+    </body>
+</html>
+

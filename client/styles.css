@@ -1,0 +1,41 @@
+body {
+    font-family: Tahoma;
+    font-size: 16px;
+}
+
+span { 
+    padding-left: 5px;
+}
+
+div {
+    margin: 5px 0;
+}
+
+.tree-root {
+    left: 0 !important;
+}
+
+.expanded::before {
+    content: url('images/icon_minus.png');
+}
+
+.collapsed::before {
+    content: url('images//icon_plus.png');
+}
+
+.folder-node, .file-node {
+    position: relative;
+    left: 20px;
+}
+
+.file-node {
+    left: 38px;
+}
+
+.hide > div {
+    display: none;
+}
+
+i {
+    color: rgb(150, 150, 150);
+}
