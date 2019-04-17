@@ -11,8 +11,8 @@ window.onload = () => {
       {"CODEID":"24678","CODEParentID":"21527","CODEVal":"24678","CODETxt":"Thursday","CODEIcon":"file"}
     ];
     
-    const hasChildren = (treeData, treeNode) => {
-      let children = treeData.filter(treeElement => treeElement.CODEParentID === treeNode.CODEID);
+    const hasChildren = (treeData, currElement) => {
+      let children = treeData.filter(treeElement => treeElement.CODEParentID === currElement.CODEID);
       return children.length > 0 ? true : false;
     }
     
@@ -45,11 +45,11 @@ window.onload = () => {
       rootNode.setAttribute("id", root.CODEID);
       rootNode.setAttribute("class", 'tree-root folder-node expanded');
       
-      let rootSpan = document.createElement('span');
-      rootSpan.appendChild(document.createTextNode(root.CODETxt))
-      rootNode.appendChild(rootSpan);
-      rootSpan.addEventListener('click', () => toggleFolderView(rootNode));
-      appendIcon(rootSpan, root.CODEIcon);
+      let rootText = document.createElement('span');
+      rootText.appendChild(document.createTextNode(root.CODETxt))
+      rootNode.appendChild(rootText);
+      rootText.addEventListener('click', () => toggleFolderView(rootNode));
+      appendIcon(rootText, root.CODEIcon);
       treeContainer.appendChild(rootNode);
       
       treeData.map((treeElement, i) => {
